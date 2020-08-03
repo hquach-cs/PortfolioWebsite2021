@@ -1,12 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Navbar from "./components/Navbar";
+import "./styles/index.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    return <h1>Hello World!</h1>;
+    return (
+      <div>
+        <Navbar />
+        <div style={{ height: "1500px" }}></div>
+      </div>
+    );
   }
 }
 

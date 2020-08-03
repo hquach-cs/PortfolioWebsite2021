@@ -1,0 +1,48 @@
+.navbarHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+.navbarLogo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.navbarUL {
+  list-style: none;
+}
+
+.navbarUL li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navbarUL li a {
+  padding: 10px;
+  position: relative;
+  top: 0;
+  transition: all 0.3s ease 0s, top ease 0.1s;
+}
+
+.navbarUL li a:hover {
+  top: -1px;
+  color: #639a67;
+}
+
+.navbarButton {
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  outline: none;
+  background-color: #639a67;
+  color: white;
+}
+
+.navbarButton:hover {
+  transition: all 0.3s ease 0s;
+  opacity: 0.8;
+}
