@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Navbar from "./components/Navbar";
+import Starter from "./components/Starter";
 import "./styles/index.css";
 
 class App extends React.Component {
@@ -11,6 +12,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
+        <Starter />
         <div style={{ height: "1500px" }}></div>
       </div>
     );
