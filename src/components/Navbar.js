@@ -1,36 +1,59 @@
 import React from "react";
-import { COLORS } from "./../styles.js";
+import HamburgerMenu from "./HamburgerMenu.js";
 import "./../styles/navbar.css";
 
 // Styles
-const header = { display: "flex", justifyContent: "flex-end" };
-const logo = { cursor: "pointer", marginRight: "auto" };
-const linkList = { listStyle: "none" };
-const linkItem = {};
-const linkItemLink = {};
-const buttons = {};
-
 export default class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: true,
+      scrollPos: 0,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll() {
+    const { scrollPos } = this.state;
+    this.setState({
+      scrollPos: document.body.getBoundingClientRect().top,
+      show: document.body.getBoundingClientRect().top > scrollPos,
+    });
+  }
   render() {
     return (
-      <header class="navbarHeader">
-        <h3 class="navbarLogo">Henry Quach</h3>
+      <header class={this.state.show ? "navbarHeader" : "navbarHeader animate"}>
+        <h3 class="navbarLogo">Henry Q.</h3>
         <nav>
           <ul class="navbarUL">
             <li>
-              <a href="#">Home</a>
+              <a href="#">Start</a>
             </li>
             <li>
               <a href="#">About</a>
             </li>
             <li>
-              <a href="#">Project</a>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">
+                <button>Get in touch!</button>
+              </a>
             </li>
           </ul>
         </nav>
-        <a href="#">
-          <button class="navbarButton">Get in touch!</button>
-        </a>
+        <HamburgerMenu />
       </header>
     );
   }

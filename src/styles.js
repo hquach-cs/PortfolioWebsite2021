@@ -1,16 +1,16 @@
 export const COLORS = {
   // Dark Theme
   darkBackground: "#121212",
-  darkPrimary: "",
-  darkVariant: "",
-  darkSecondary: "",
+  lightPrimary: "#2B580C",
+  lightVariant: "#d9bf77",
+  lightSecondary: "#639a67",
   darkOnPrimary: "#000",
   darkOnBackground: "FFFFFF",
   // Light Theme
   lightBackground: "#FFFFFF",
-  lightPrimary: "",
-  lightVariant: "",
-  lightSecondary: "",
+  lightPrimary: "#2B580C",
+  lightVariant: "#d9bf77",
+  lightSecondary: "#639a67",
   lightOnPrimary: "#FFFFFF",
   lightOnBackground: "000000",
 };
