@@ -9,6 +9,7 @@ export default class Navbar extends React.Component {
     this.state = {
       show: true,
       scrollPos: 0,
+      menuShow: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -28,14 +29,22 @@ export default class Navbar extends React.Component {
       show: document.body.getBoundingClientRect().top > scrollPos,
     });
   }
+  callbackFunction = (childData) => {
+    this.setState({ menuShow: !this.state.menuShow });
+  };
   render() {
     return (
       <header class={this.state.show ? "navbarHeader" : "navbarHeader animate"}>
-        <h3 class="navbarLogo">Henry Q.</h3>
-        <nav>
+        <div class="navbarlogo_button">
+          <h3 class="navbarLogo">Henry Q.</h3>
+          <HamburgerMenu parentCallback={this.callbackFunction} />
+        </div>
+        <nav class={this.state.menuShow ? "navbarNAV open" : "navbarNAV close"}>
           <ul class="navbarUL">
             <li>
-              <a href="#">Start</a>
+              <a class="navbarA" href="#">
+                Start
+              </a>
             </li>
             <li>
               <a href="#">About</a>
@@ -53,7 +62,6 @@ export default class Navbar extends React.Component {
             </li>
           </ul>
         </nav>
-        <HamburgerMenu />
       </header>
     );
   }

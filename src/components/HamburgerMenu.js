@@ -14,6 +14,7 @@ export default class HamburgerMenu extends React.Component {
   handleClick(event) {
     const state = !this.state.menu_open;
     this.setState({ menu_open: state });
+    this.props.parentCallback(true);
   }
 
   render() {
