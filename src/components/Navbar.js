@@ -36,7 +36,9 @@ export default class Navbar extends React.Component {
     return (
       <header class={this.state.show ? "navbarHeader" : "navbarHeader animate"}>
         <div class="navbarlogo_button">
-          <h3 class="navbarLogo">Henry Q.</h3>
+          <a href="#" class="navbarLogo">
+            Henry Quach
+          </a>
           <HamburgerMenu parentCallback={this.callbackFunction} />
         </div>
         <nav class={this.state.menuShow ? "navbarNAV open" : "navbarNAV close"}>
@@ -54,11 +56,6 @@ export default class Navbar extends React.Component {
             </li>
             <li>
               <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">
-                <button>Get in touch!</button>
-              </a>
             </li>
           </ul>
         </nav>

@@ -15,4 +15,11 @@ export const COLORS = {
   lightOnBackground: "000000",
 };
 
-export const FONTS = {};
+export const FONTS = {
+  // Title/Bold
+  fontFamily: "Montserrat, sans-serif",
+  fontWeight: "900",
+  // Body/Regular
+  fontFamily: "Work Sans, sans-serif",
+  fontWeight: "300",
+};
