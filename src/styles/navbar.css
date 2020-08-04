@@ -14,7 +14,6 @@
 
 .navbarLogo {
   cursor: pointer;
-  margin-right: auto;
   font-size: 2rem;
   transition: all 0.4s ease-in-out;
   opacity: 1;
@@ -53,32 +52,46 @@
 
 .navbarlogo_button {
   margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 600px) {
-  .navbarlogo_button {
-    width: 100%;
+  .menu-btn {
     display: flex;
-    justify-content: space-between;
   }
-
   .navbarNAV.close {
     height: 0;
     opacity: 0;
   }
-
   .navbarNAV.open {
     width: 100%;
     opacity: 1;
     transition: all 0.5s ease-in-out;
   }
 
-  .menu-btn {
-    display: flex;
+  .navbarNAV .navbarUL li {
+    width: 100%;
+    padding: 0;
   }
 
+  .navbarUL {
+    text-align: center;
+  }
+  .navbarUL li a {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
   .navbarHeader {
     flex-direction: column;
+    padding: 0;
+  }
+  .navbarlogo_button {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px 15px;
   }
 
   .navbarUL {
@@ -94,5 +107,11 @@
     display: block;
     width: 100%;
     padding: 0;
+  }
+
+  .burgerMenu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 }

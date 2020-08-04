@@ -36,17 +36,19 @@ export default class Navbar extends React.Component {
     return (
       <header class={this.state.show ? "navbarHeader" : "navbarHeader animate"}>
         <div class="navbarlogo_button">
-          <a href="#" class="navbarLogo">
-            Henry Quach
-          </a>
-          <HamburgerMenu parentCallback={this.callbackFunction} />
+          <div style={{ display: "flex" }}>
+            <a href="#" class="navbarLogo typewriter">
+              Henry Quach
+            </a>
+          </div>
+          <div class="burgerMenu">
+            <HamburgerMenu parentCallback={this.callbackFunction} />
+          </div>
         </div>
         <nav class={this.state.menuShow ? "navbarNAV open" : "navbarNAV close"}>
           <ul class="navbarUL">
             <li>
-              <a class="navbarA" href="#">
-                Start
-              </a>
+              <a href="#">Start</a>
             </li>
             <li>
               <a href="#">About</a>
