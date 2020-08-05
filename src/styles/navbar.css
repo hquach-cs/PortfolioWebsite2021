@@ -11,6 +11,8 @@
   color: white;
   font-family: "Montserrat, sans-serif";
   background: rgba(255, 255, 255, 0);
+  animation-name: FadeIn;
+  animation-duration: 1.5s;
 }
 
 .navbarLogo {
@@ -114,5 +116,14 @@
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
