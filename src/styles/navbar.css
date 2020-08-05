@@ -128,3 +128,11 @@
     opacity: 1;
   }
 }
+
+.navbarLink {
+  opacity: 0.8;
+}
+
+.navbarLink.active {
+  opacity: 1;
+}

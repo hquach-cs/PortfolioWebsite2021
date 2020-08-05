@@ -1,5 +1,6 @@
 import React from "react";
 import HamburgerMenu from "./HamburgerMenu.js";
+import Navlink from "./Navlink";
 import "./../styles/navbar.css";
 
 // Styles
@@ -10,6 +11,10 @@ export default class Navbar extends React.Component {
       show: true,
       scrollPos: 0,
       menuShow: false,
+      startActive: true,
+      aboutActive: false,
+      projectActive: false,
+      contactActive: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -28,6 +33,47 @@ export default class Navbar extends React.Component {
       scrollPos: document.body.getBoundingClientRect().top,
       show: document.body.getBoundingClientRect().top > scrollPos,
     });
+
+    //Scrolling Active Navbar Link
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos < window.innerHeight) {
+      this.setState({
+        startActive: true,
+        aboutActive: false,
+        projectActive: false,
+        contactActive: false,
+      });
+    }
+    if (
+      currentScrollPos >= window.innerHeight &&
+      currentScrollPos < window.innerHeight * 2
+    ) {
+      this.setState({
+        startActive: false,
+        aboutActive: true,
+        projectActive: false,
+        contactActive: false,
+      });
+    }
+    if (
+      currentScrollPos >= window.innerHeight * 2 &&
+      currentScrollPos < window.innerHeight * 3
+    ) {
+      this.setState({
+        startActive: false,
+        aboutActive: false,
+        projectActive: true,
+        contactActive: false,
+      });
+    }
+    if (currentScrollPos >= window.innerHeight * 3) {
+      this.setState({
+        startActive: false,
+        aboutActive: false,
+        projectActive: false,
+        contactActive: true,
+      });
+    }
   }
   callbackFunction = (childData) => {
     this.setState({ menuShow: !this.state.menuShow });
@@ -47,18 +93,10 @@ export default class Navbar extends React.Component {
         </div>
         <nav class={this.state.menuShow ? "navbarNAV open" : "navbarNAV close"}>
           <ul class="navbarUL">
-            <li>
-              <a href="#start">Start</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
+            <Navlink link="Start" active={this.state.startActive} />
+            <Navlink link="About" active={this.state.aboutActive} />
+            <Navlink link="Projects" active={this.state.projectActive} />
+            <Navlink link="Contact" active={this.state.contactActive} />
           </ul>
         </nav>
       </header>
