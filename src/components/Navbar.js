@@ -48,10 +48,10 @@ export default class Navbar extends React.Component {
         <nav class={this.state.menuShow ? "navbarNAV open" : "navbarNAV close"}>
           <ul class="navbarUL">
             <li>
-              <a href="#">Start</a>
+              <a href="#start">Start</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
               <a href="#">Projects</a>

@@ -13,6 +13,7 @@
   background: rgba(255, 255, 255, 0);
   animation-name: FadeIn;
   animation-duration: 1.5s;
+  z-index: 100;
 }
 
 .navbarLogo {

@@ -6,14 +6,16 @@ import "./../styles/starter.css";
 export default class Starter extends React.Component {
   render() {
     return (
-      <div class="starterContainer">
+      <div class="starterContainer" id="start">
         <Code />
-
         <div class="starterTitle">
           <h1>
             Henry <span>Quach</span>
           </h1>
-          <div class="bars"></div>
+          <div class="bars">
+            <div class="bar"></div>
+            <div class="bar2"></div>
+          </div>
           <p>
             Software engineer residing in Nashville, TN.
             <span>Looking for a job opportunity.</span>
