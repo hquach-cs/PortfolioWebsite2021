@@ -9,6 +9,7 @@ export default class Code extends React.Component {
     return (
       <div class="codeContainer">
         <div class="codeWrapper">
+          {/*  */}
           <div class="codeLineWrapper">
             <div class="codeLine typewriterleft">
               <CodelineNum num="01" />
@@ -18,6 +19,7 @@ export default class Code extends React.Component {
               <div class="codeClass">Person</div>&nbsp;&#123;
             </div>
           </div>
+          {/*  */}
           <div class="codeLineWrapper">
             <div
               class="codeLine typewriterleft"
@@ -29,6 +31,7 @@ export default class Code extends React.Component {
               <div class="codeClass">Henry</div>()&nbsp;&#123;
             </div>
           </div>
+          {/*  */}
           <div class="codeLineWrapper">
             <div
               class="codeLine typewriterleft"
@@ -38,9 +41,11 @@ export default class Code extends React.Component {
               <Tabbed />
               <Tabbed />
               <div style={{ color: "cyan" }}>this</div>.<div>name</div>
-              &nbsp;=&nbsp;<div>Henry Quach</div>;
+              &nbsp;=&nbsp;
+              <div style={{ color: "lightgreen" }}>"Henry Quach"</div>;
             </div>
           </div>
+          {/*  */}
           <div class="codeLineWrapper">
             <div
               class="codeLine typewriterleft"
@@ -51,9 +56,10 @@ export default class Code extends React.Component {
               <Tabbed />
               <div style={{ color: "cyan" }}>this</div>.<div>location</div>
               &nbsp;=&nbsp;
-              <div>Nashville,TN</div>;
+              <div style={{ color: "lightgreen" }}>"Nashville,TN"</div>;
             </div>
           </div>
+          {/*  */}
           <div class="codeLineWrapper">
             <div
               class="codeLine typewriterleft"
@@ -70,6 +76,7 @@ export default class Code extends React.Component {
               ;
             </div>
           </div>
+          {/*  */}
           <div class="codeLineWrapper">
             <div
               class="codeLine typewriterleft"
@@ -80,26 +87,115 @@ export default class Code extends React.Component {
               &#125;
             </div>
           </div>
+          {/*  */}
           <div class="codeLineWrapper">
             <div
-              class="codeLine typewriterleft"
+              class="codeLine typewriterskip"
               style={{ animationDelay: "6s" }}
             >
               <CodelineNum num="07" />
             </div>
           </div>
+          {/*  */}
           <div class="codeLineWrapper">
             <div
               class="codeLine typewriterleft"
-              style={{ animationDelay: "7s" }}
+              style={{ animationDelay: "6.25s" }}
             >
               <CodelineNum num="08" />
               <Tabbed />
               <div style={{ color: "darkgreen" }}>public&nbsp;</div>
-              <div>String</div>&nbsp;
+              <div>Education</div>&nbsp;
               <div class="codeClass">getEducation</div>()&nbsp;&#123;
             </div>
           </div>
+          {/*  */}
+          <div class="codeLineWrapper">
+            <div
+              class="codeLine typewriterleft"
+              style={{ animationDelay: "7.25s" }}
+            >
+              <CodelineNum num="09" />
+              <Tabbed />
+              <Tabbed />
+              <div style={{ color: "cyan" }}>this</div>.<div>schoolName</div>
+              &nbsp;=&nbsp;
+              <div style={{ color: "orange" }}>
+                University of Tennesse, Knoxville (UTK)
+              </div>
+              ;
+            </div>
+          </div>
+          {/*  */}
+          <div class="codeLineWrapper">
+            <div
+              class="codeLine typewriterleft"
+              style={{ animationDelay: "8.25s" }}
+            >
+              <CodelineNum num="10" />
+              <Tabbed />
+              <Tabbed />
+              <div style={{ color: "cyan" }}>this</div>.<div>degree</div>
+              &nbsp;=&nbsp;
+              <div>
+                "BS in <div style={{ color: "red" }}>Computer Science</div>";
+              </div>
+            </div>
+          </div>
+          {/*  */}
+          <div class="codeLineWrapper">
+            <div
+              class="codeLine typewriterleft"
+              style={{ animationDelay: "9.25s" }}
+            >
+              <CodelineNum num="11" />
+              <Tabbed />
+              <Tabbed /> <div style={{ color: "cyan" }}>this</div>.
+              <div>gradDate</div>
+              &nbsp;=&nbsp; "<div style={{ color: "red" }}>12/2019</div>";
+            </div>
+          </div>
+          {/*  */}
+          <div class="codeLineWrapper">
+            <div
+              class="codeLine typewriterleft"
+              style={{ animationDelay: "10.25s" }}
+            >
+              <CodelineNum num="12" />
+              <Tabbed />
+              <Tabbed />
+              <div style={{ color: "purple" }}>return</div>&nbsp;
+              <div style={{ color: "cyan" }}>new</div>&nbsp;
+              <div>
+                Education(<div style={{ color: "cyan" }}>this</div>.
+                <div>schoolName</div>,<div style={{ color: "cyan" }}>this</div>.
+                <div>degree</div>,<div style={{ color: "cyan" }}>this</div>.
+                <div>gradDate</div>)
+              </div>
+              ;
+            </div>
+          </div>
+          {/*  */}
+          <div class="codeLineWrapper">
+            <div
+              class="codeLine typewriterleft"
+              style={{ animationDelay: "11.25s" }}
+            >
+              <CodelineNum num="13" />
+              <Tabbed />
+              &#125;
+            </div>
+          </div>
+          {/*  */}
+          <div class="codeLineWrapper">
+            <div
+              class="codeLine typewriterleft"
+              style={{ animationDelay: "11.5s" }}
+            >
+              <CodelineNum num="14" />
+            </div>
+          </div>
+          {/*  */}
         </div>
       </div>
     );
