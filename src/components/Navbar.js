@@ -2,6 +2,7 @@ import React from "react";
 import HamburgerMenu from "./HamburgerMenu.js";
 import Navlink from "./Navlink";
 import "./../styles/navbar.css";
+import Resume from "./../scripts/hquachResume.pdf";
 
 // Styles
 export default class Navbar extends React.Component {
@@ -36,7 +37,7 @@ export default class Navbar extends React.Component {
 
     //Scrolling Active Navbar Link
     const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < window.innerHeight) {
+    if (currentScrollPos < window.innerHeight - window.innerHeight * (1 / 4)) {
       this.setState({
         startActive: true,
         aboutActive: false,
@@ -45,8 +46,8 @@ export default class Navbar extends React.Component {
       });
     }
     if (
-      currentScrollPos >= window.innerHeight &&
-      currentScrollPos < window.innerHeight * 2
+      currentScrollPos >= window.innerHeight - window.innerHeight * (1 / 4) &&
+      currentScrollPos < window.innerHeight * 2 - window.innerHeight * (1 / 4)
     ) {
       this.setState({
         startActive: false,
@@ -56,8 +57,9 @@ export default class Navbar extends React.Component {
       });
     }
     if (
-      currentScrollPos >= window.innerHeight * 2 &&
-      currentScrollPos < window.innerHeight * 3
+      currentScrollPos >=
+        window.innerHeight * 2 - window.innerHeight * (1 / 4) &&
+      currentScrollPos < window.innerHeight * 3 - window.innerHeight * (1 / 4)
     ) {
       this.setState({
         startActive: false,
@@ -66,7 +68,10 @@ export default class Navbar extends React.Component {
         contactActive: false,
       });
     }
-    if (currentScrollPos >= window.innerHeight * 3) {
+    if (
+      currentScrollPos >=
+      window.innerHeight * 3 - window.innerHeight * (1 / 4)
+    ) {
       this.setState({
         startActive: false,
         aboutActive: false,
@@ -97,6 +102,11 @@ export default class Navbar extends React.Component {
             <Navlink link="About" active={this.state.aboutActive} />
             <Navlink link="Projects" active={this.state.projectActive} />
             <Navlink link="Contact" active={this.state.contactActive} />
+            <li>
+              <a href={Resume} target="_blank" type="pdf">
+                Resume
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
