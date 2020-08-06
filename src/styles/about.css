@@ -1,40 +1,43 @@
 .aboutContainer {
-  height: 100vh;
+  position: absolute;
+  min-height: 100vh;
   width: 100%;
   color: white;
 }
 
 .aboutWrapper {
-  position: absolute;
-  width: 30%;
-  margin-left: 15%;
+  position: relative;
+  width: 100%;
+  height: 30%;
   margin-top: 10%;
 }
-.aboutTitle h2 {
-  margin-bottom: 10px;
-}
 
-.aboutPassion {
-  position: absolute;
+.aboutTitle {
   width: 100%;
-  height: 25%;
-  margin-top: 20%;
+  height: 100%;
   display: flex;
-  background: rgb(18, 18, 18, 0.05);
   justify-content: center;
 }
 
-.passionItem {
-  width: 15%;
-  height: 100%;
-  margin: 0 20px;
-  text-align: center;
-  padding: 10px;
-  background: rgb(18, 18, 18, 0.05);
-  border-radius: 20px;
+.aboutName,
+.aboutDesc {
+  width: 30%;
+  padding: 0px 10px;
 }
 
-.passionItem h2 {
-  text-decoration: underline;
-  margin-bottom: 10px;
+.aboutName h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .aboutTitle {
+    flex-direction: column;
+    padding-left: 5%;
+  }
+
+  .aboutName,
+  .aboutDesc {
+    width: 100%;
+  }
 }

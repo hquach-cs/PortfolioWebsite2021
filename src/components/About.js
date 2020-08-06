@@ -8,45 +8,41 @@ export default class About extends React.Component {
       <div class="aboutContainer" id="about">
         <div class="aboutWrapper">
           <div class="aboutTitle">
-            <h2>More about me!</h2>
-
-            <p>
-              My name is Henry Quach and I am a software developer. After
-              graduating from University of Tennessee, Knoxville (Go Vols!) in
-              December of 2019, I been working hard on creating multiple
-              projects during the downtime due to the pandemic. I improve my
-              ability to achieve better experience for user in web design and
-              mobile application.
-            </p>
+            <div class="aboutName">
+              <h1 style={{}}>About</h1>
+              <div class="aboutEducName">
+                <h2>Education</h2>
+                <p>
+                  Put all speaking her delicate recurred possible. Set
+                  indulgence inquietude discretion insensible bed why
+                  announcing. Middleton fat two satisfied additions.
+                </p>
+              </div>
+            </div>
+            <div class="aboutDesc">
+              <h2>Placeholder!</h2>
+              <p>
+                Put all speaking her delicate recurred possible. Set indulgence
+                inquietude discretion insensible bed why announcing. Middleton
+                fat two satisfied additions.
+              </p>
+              <h2>Placeholder</h2>
+              <p>
+                Yourself off its pleasant ecstatic now law. Ye their mirth seems
+                of songs. Prospect out bed contempt separate. Her inquietude our
+                shy yet sentiments collecting. Cottage fat beloved himself
+                arrived old.
+              </p>
+              <h2>Placeholder</h2>
+              <p>
+                Husbands ask repeated resolved but laughter debating. She end
+                cordial visitor noisier fat subject general picture. Or if
+                offering confined entrance no. Nay rapturous him see something
+                residence.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="aboutPassion">
-          <div class="passionItem">
-            <h2>DESIGN</h2>
-            <p>
-              Design plays a big role in many application process. Without a
-              good design, other part of the application will not fit together.
-              This allow easier process of creating better applications.
-            </p>
-          </div>
-          <div class="passionItem">
-            <h2>TECHNOLOGY</h2>
-            <p>
-              I believe technology plays a big role in society. Technology allow
-              many new opprotunity for a lot of people. Imagine thinking 20
-              years ago, the internet wasn't as it is today.
-            </p>
-          </div>
-          <div class="passionItem">
-            <h2>EXPERIENCE</h2>
-            <p>
-              I believe creating rememerable experience of using an application
-              help increase usage and admires for the product. This should be on
-              the front mind of many new project builds.
-            </p>
-          </div>
-        </div>
-        <div class="aboutSkills"></div>
       </div>
     );
   }

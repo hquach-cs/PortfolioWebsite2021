@@ -67,3 +67,13 @@
     transform: translateX(0);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .starterTitle {
+    position: absolute;
+    top: 30%;
+    overflow: hidden;
+    margin-left: 5%;
+    color: white;
+  }
+}
