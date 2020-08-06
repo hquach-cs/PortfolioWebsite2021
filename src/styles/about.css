@@ -53,7 +53,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: FadeIn 1.5s forwards;
 }
 
 .skillsItem {
@@ -63,16 +62,23 @@
   padding: 10px 20px;
   border-radius: 20px;
   border: white solid 1px;
-  opacity: 0;
-  animation: FadeIn 1.5s forwards;
+  opacity: 0.75;
+  animation: FadeIn 1.5s backwards;
 }
 
 .skillsItem:hover {
   opacity: 1;
 }
 
-.skillsItem.active {
+.activeSkill {
+  cursor: pointer;
+  margin: 0px 10px;
+  background: rgba(18, 18, 18, 0.05);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: white solid 1px;
   opacity: 1;
+  animation: FadeIn 1.5s backwards;
 }
 
 @media screen and (max-width: 600px) {

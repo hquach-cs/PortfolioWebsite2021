@@ -51,7 +51,7 @@ export default class About extends React.Component {
             </div>
             <div class="aboutSkills">
               <h2 style={{ paddingRight: "20px" }}>Languages:</h2>
-              <div class="skillsItem active" style={{ animationDelay: "0s" }}>
+              <div class="activeSkill" style={{ animationDelay: "0s" }}>
                 Python
               </div>
               <div class="skillsItem" style={{ animationDelay: "0.25s" }}>
