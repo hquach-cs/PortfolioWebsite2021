@@ -1,3 +1,7 @@
+.animateParent * {
+  display: none;
+}
+
 .aboutContainer {
   position: absolute;
   min-height: 100vh;
@@ -17,6 +21,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .aboutName,
@@ -25,9 +30,49 @@
   padding: 0px 10px;
 }
 
+.aboutDesc div {
+  padding-bottom: 15px;
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
+}
+
+.aboutName h1,
+.aboutEducName {
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
+}
+
 .aboutName h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+}
+
+.aboutSkills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: FadeIn 1.5s forwards;
+}
+
+.skillsItem {
+  cursor: pointer;
+  margin: 0px 10px;
+  background: rgba(18, 18, 18, 0.05);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: white solid 1px;
+  opacity: 0;
+  animation: FadeIn 1.5s forwards;
+}
+
+.skillsItem:hover {
+  opacity: 1;
+}
+
+.skillsItem.active {
+  opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -39,5 +84,32 @@
   .aboutName,
   .aboutDesc {
     width: 100%;
+  }
+
+  .aboutSkills {
+    flex-direction: column;
+  }
+  .aboutSkills div {
+    margin-top: 10px;
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

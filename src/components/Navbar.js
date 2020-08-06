@@ -37,17 +37,18 @@ export default class Navbar extends React.Component {
 
     //Scrolling Active Navbar Link
     const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < window.innerHeight - window.innerHeight * (1 / 4)) {
+    if (currentScrollPos < window.innerHeight - window.innerHeight * (1 / 3)) {
       this.setState({
         startActive: true,
         aboutActive: false,
         projectActive: false,
         contactActive: false,
       });
+      this.props.DetectSection("start");
     }
     if (
-      currentScrollPos >= window.innerHeight - window.innerHeight * (1 / 4) &&
-      currentScrollPos < window.innerHeight * 2 - window.innerHeight * (1 / 4)
+      currentScrollPos >= window.innerHeight - window.innerHeight * (1 / 3) &&
+      currentScrollPos < window.innerHeight * 2 - window.innerHeight * (1 / 3)
     ) {
       this.setState({
         startActive: false,
@@ -55,11 +56,12 @@ export default class Navbar extends React.Component {
         projectActive: false,
         contactActive: false,
       });
+      this.props.DetectSection("about");
     }
     if (
       currentScrollPos >=
-        window.innerHeight * 2 - window.innerHeight * (1 / 4) &&
-      currentScrollPos < window.innerHeight * 3 - window.innerHeight * (1 / 4)
+        window.innerHeight * 2 - window.innerHeight * (1 / 3) &&
+      currentScrollPos < window.innerHeight * 3 - window.innerHeight * (1 / 3)
     ) {
       this.setState({
         startActive: false,
@@ -67,10 +69,11 @@ export default class Navbar extends React.Component {
         projectActive: true,
         contactActive: false,
       });
+      this.props.DetectSection("project");
     }
     if (
       currentScrollPos >=
-      window.innerHeight * 3 - window.innerHeight * (1 / 4)
+      window.innerHeight * 3 - window.innerHeight * (1 / 3)
     ) {
       this.setState({
         startActive: false,
@@ -78,6 +81,7 @@ export default class Navbar extends React.Component {
         projectActive: false,
         contactActive: true,
       });
+      this.props.DetectSection("contact");
     }
   }
   callbackFunction = (childData) => {
