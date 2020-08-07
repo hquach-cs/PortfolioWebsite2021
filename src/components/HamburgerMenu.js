@@ -6,14 +6,12 @@ export default class HamburgerMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menu_open: false,
+      menu_open: this.props.show,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(event) {
-    const state = !this.state.menu_open;
-    this.setState({ menu_open: state });
     this.props.parentCallback(true);
   }
 
@@ -23,7 +21,7 @@ export default class HamburgerMenu extends React.Component {
 
     return (
       <div
-        class={this.state.menu_open ? menu_class_open : menu_class_close}
+        class={this.props.show ? menu_class_open : menu_class_close}
         onClick={this.handleClick}
       >
         <div class="menu-btn_burger"></div>

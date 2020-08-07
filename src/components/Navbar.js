@@ -80,6 +80,7 @@ export default class Navbar extends React.Component {
     this.setState({
       scrollPos: document.body.getBoundingClientRect().top,
       show: document.body.getBoundingClientRect().top > scrollPos,
+      menuShow: false,
     });
 
     //Scrolling Active Navbar Link
@@ -144,7 +145,10 @@ export default class Navbar extends React.Component {
             </a>
           </div>
           <div class="burgerMenu">
-            <HamburgerMenu parentCallback={this.callbackFunction} />
+            <HamburgerMenu
+              parentCallback={this.callbackFunction}
+              show={this.state.menuShow}
+            />
           </div>
         </div>
         <nav class={this.state.menuShow ? "navbarNAV open" : "navbarNAV close"}>
