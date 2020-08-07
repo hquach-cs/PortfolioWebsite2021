@@ -21,17 +21,17 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
 }
 
 .aboutName,
 .aboutDesc {
   width: 30%;
   padding: 0px 10px;
+  line-height: 1.5rem;
 }
 
 .aboutDesc div {
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   opacity: 0;
   transform: translateX(-75%);
   animation: slideInFromLeft 1.5s forwards;
@@ -46,10 +46,10 @@
 
 .aboutName h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.aboutSkills {
+.aboutLang {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +81,17 @@
   animation: FadeIn 1.5s backwards;
 }
 
+.aboutSkills {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutSkillsList {
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
+}
 @media screen and (max-width: 600px) {
   .aboutTitle {
     flex-direction: column;
@@ -96,10 +107,10 @@
     margin-bottom: 20px;
   }
 
-  .aboutSkills {
+  .aboutLang {
     flex-direction: column;
   }
-  .aboutSkills div {
+  .aboutLang div {
     margin-top: 10px;
   }
 }

@@ -29,6 +29,53 @@ export default class About extends React.Component {
               <div class="aboutName">
                 <h1 style={{ animationDelay: "0.9s" }}>About</h1>
                 <div class="aboutEducName" style={{ animationDelay: "1.2s" }}>
+                  <h2>More about me</h2>
+                  <p>
+                    Hello my name is{" "}
+                    <div
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        display: "inline",
+                        color: "cyan",
+                      }}
+                    >
+                      {" "}
+                      Henry Quach{" "}
+                    </div>{" "}
+                    and I am an aspiring software developer that loves to
+                    program multiple interesting apps to showcase to users. My
+                    goal is to become a reliable programmer that create multiple
+                    things that users/consumers enjoy.
+                  </p>
+                </div>
+                <div class="aboutSkillsList" style={{ animationDelay: "1.5s" }}>
+                  <h2>Skills</h2>
+                  <div class="aboutSkills">
+                    <a
+                      style={{
+                        color: "cyan",
+                        textDecoration: "underline",
+                        paddingBottom: "10px",
+                      }}
+                      href="#softSkills"
+                    >
+                      Languages Below
+                    </a>
+
+                    <h4>Technical Skills:</h4>
+                    <ul style={{ columnCount: "2", listStyleType: "none" }}>
+                      <li>Database (MySQL,MongoDB)</li>
+                      <li>Version Control (Git,Github)</li>
+                      <li>AGILE / SCRUM</li>
+                      <li>Machine Learning</li>
+                      <li>Data Handling</li>
+                      <li>Data Visualization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="aboutDesc">
+                <div style={{ animationDelay: "0s" }}>
                   <h2>Education</h2>
                   <p>
                     I got my associate and bachelor's degree in{" "}
@@ -54,28 +101,6 @@ export default class About extends React.Component {
                     in December of 2019. Go Vols!
                   </p>
                 </div>
-              </div>
-              <div class="aboutDesc">
-                <div style={{ animationDelay: "0s" }}>
-                  <h2>More about me</h2>
-                  <p>
-                    Hello my name is{" "}
-                    <div
-                      style={{
-                        fontFamily: "Montserrat, sans-serif",
-                        display: "inline",
-                        color: "cyan",
-                      }}
-                    >
-                      {" "}
-                      Henry Quach{" "}
-                    </div>{" "}
-                    and I am an aspiring software developer that loves to
-                    program multiple interesting apps to showcase to users. My
-                    goal is to become a reliable programmer that create multiple
-                    things that users/consumers enjoy.
-                  </p>
-                </div>
                 <div style={{ animationDelay: "0.3s" }}>
                   <h2>Design</h2>
                   <p>
@@ -85,7 +110,7 @@ export default class About extends React.Component {
                     for the user's experience.
                   </p>
                 </div>
-                <div style={{ animationDelay: ".6s" }}>
+                <div style={{ animationDelay: ".6s" }} id="softSkills">
                   <h2>Soft-Skills</h2>
                   <p>
                     I believe my soft skills such as{" "}
@@ -125,7 +150,7 @@ export default class About extends React.Component {
                 </div>
               </div>
             </div>
-            <div class="aboutSkills">
+            <div class="aboutLang" id="aboutLang">
               <h2 style={{ paddingRight: "20px" }}>Languages:</h2>
               <div
                 class={
