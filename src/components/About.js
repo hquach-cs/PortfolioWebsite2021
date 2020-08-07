@@ -1,8 +1,22 @@
 import React from "react";
+import CodePython from "./CodePython";
+import CodeJava from "./CodeJava";
 import "./../styles/about.css";
 
 // Styles
 export default class About extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      codeLang: "python",
+    };
+    this.handleCodeClick = this.handleCodeClick.bind(this);
+  }
+
+  handleCodeClick = (id) => () => {
+    this.setState({ codeLang: id });
+  };
+
   render() {
     return (
       <div class={this.props.active ? "" : "animateParent"} id="about">
@@ -51,10 +65,22 @@ export default class About extends React.Component {
             </div>
             <div class="aboutSkills">
               <h2 style={{ paddingRight: "20px" }}>Languages:</h2>
-              <div class="activeSkill" style={{ animationDelay: "0s" }}>
+              <div
+                class={
+                  this.state.codeLang == "python" ? "activeSkill" : "skillsItem"
+                }
+                onClick={this.handleCodeClick("python")}
+                style={{ animationDelay: "0s" }}
+              >
                 Python
               </div>
-              <div class="skillsItem" style={{ animationDelay: "0.25s" }}>
+              <div
+                class={
+                  this.state.codeLang == "java" ? "activeSkill" : "skillsItem"
+                }
+                onClick={this.handleCodeClick("java")}
+                style={{ animationDelay: "0.25s" }}
+              >
                 Java
               </div>
               <div class="skillsItem" style={{ animationDelay: "0.5s" }}>
@@ -68,6 +94,8 @@ export default class About extends React.Component {
               </div>
             </div>
           </div>
+          <CodePython active={this.state.codeLang == "python" ? true : false} />
+          <CodeJava active={this.state.codeLang == "java" ? true : false} />
         </div>
       </div>
     );

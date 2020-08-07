@@ -67,6 +67,7 @@
   .navbarNAV.close {
     height: 0;
     opacity: 0;
+    visibility: hidden;
   }
   .navbarNAV.open {
     width: 100%;
