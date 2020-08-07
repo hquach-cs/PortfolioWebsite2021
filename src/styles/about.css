@@ -1,12 +1,13 @@
-.animateParent * {
-  display: none;
+.about {
+  min-height: 100vh;
 }
 
 .aboutContainer {
-  position: absolute;
-  min-height: 100vh;
+  position: relative;
   width: 100%;
   color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .aboutWrapper {

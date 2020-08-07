@@ -1,0 +1,135 @@
+.contact {
+  min-height: 100vh;
+  background: rgba(18, 18, 18, 0.1);
+}
+
+.contactContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  background: rgba(18, 18, 18, 0.1);
+}
+
+.githubLink {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+}
+
+.contactTitle {
+  padding-top: 5%;
+  margin-left: 20%;
+}
+
+.contactTitle h1 {
+  font-size: 3rem;
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
+  margin: 15px 0px;
+}
+
+.contactTitle p {
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
+  animation-delay: 0.5s;
+  line-height: 1.5rem;
+}
+
+.contactList {
+  padding-top: 20px;
+  margin-left: 20%;
+}
+
+.contactList h3 {
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
+  animation-delay: 0.7s;
+}
+
+.contactList ul {
+  list-style-type: none;
+  column-count: 2;
+}
+
+.contactList ul li {
+  opacity: 0;
+  animation: FadeIn 2s forwards;
+  display: flex;
+  padding-top: 5px;
+}
+
+.contactList ul li a {
+  cursor: pointer;
+}
+
+.contactList ul li a:hover {
+  color: cyan;
+  text-shadow: 0px 0px 5px cyan;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.getintouch {
+  margin-left: 20%;
+  margin-top: 60px;
+}
+.getintouch a {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  border: white solid 1px;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 5px #fff;
+  opacity: 0;
+  animation: FadeIn 2s forwards;
+}
+
+.getintouch a:hover {
+  opacity: 0.7;
+  border: cyan solid 1px;
+  color: cyan;
+  box-shadow: 0px 0px 5px cyan;
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contactTitle {
+    margin-left: 5%;
+  }
+  .contactList {
+    margin-left: 5%;
+  }
+
+  .getintouch {
+    margin-left: 0;
+    text-align: center;
+  }
+}

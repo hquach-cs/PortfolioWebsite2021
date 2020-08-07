@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import Navbar from "./components/Navbar";
 import Starter from "./components/Starter";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 import "./styles/index.css";
 
 class App extends React.Component {
@@ -28,7 +31,9 @@ class App extends React.Component {
         <Navbar DetectSection={this.handleSection} />
         <Starter />
         <About active={this.state.aboutSection} />
-        <div style={{ height: "1500px" }}></div>
+        <Projects active={this.state.projectSection} />
+        <Contact active={this.state.contactSection} />
+        <Footer />
       </div>
     );
   }

@@ -77,3 +77,7 @@ h6 {
   animation: typing 1s;
   animation-fill-mode: forwards;
 }
+
+.dontshow {
+  display: none;
+}

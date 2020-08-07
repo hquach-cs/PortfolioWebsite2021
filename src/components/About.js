@@ -22,8 +22,8 @@ export default class About extends React.Component {
 
   render() {
     return (
-      <div class={this.props.active ? "" : "animateParent"} id="about">
-        <div class="aboutContainer">
+      <div class={this.props.active ? "" : "about"} id="about">
+        <div class={this.props.active ? "aboutContainer" : "dontshow"}>
           <div class="aboutWrapper">
             <div class="aboutTitle">
               <div class="aboutName">
