@@ -17,9 +17,9 @@ class App extends React.Component {
   }
 
   handleSection = (section) => {
-    if (section == "about") this.setState({ aboutSection: true });
-    if (section == "project") this.setState({ projectSection: true });
-    if (section == "contact") this.setState({ contactSection: true });
+    if (section === "about") this.setState({ aboutSection: true });
+    if (section === "project") this.setState({ projectSection: true });
+    if (section === "contact") this.setState({ contactSection: true });
   };
 
   render() {

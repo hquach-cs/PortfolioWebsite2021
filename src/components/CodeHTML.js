@@ -4,7 +4,7 @@ import Tabbed from "./Tabbed";
 import "./../styles/aboutCode.css";
 
 // Styles
-export default class CodePython extends React.Component {
+export default class CodeHTML extends React.Component {
   render() {
     return (
       <div class={this.props.active ? "aboutCodeContainer" : "notactive"}>
@@ -13,11 +13,11 @@ export default class CodePython extends React.Component {
           <div class="codeLineWrapper">
             <div class="codeLine typewriterleft">
               <CodelineNum num="01" />
-              <div style={{ color: "purple" }}>if</div>&nbsp;
-              <div style={{ color: "yellow" }}>num</div>&nbsp;
-              <div>&lt;</div>
-              &nbsp;
-              <div style={{ color: "green" }}>0</div>:
+              <div style={{ color: "yellow" }}>&lt;div&gt;</div>&nbsp;
+              <div style={{ color: "pink" }}>&lt;h1&gt;</div>&nbsp;
+              <div style={{ color: "lightgreen" }}>Henry Quach</div>
+              <div style={{ color: "pink" }}>&lt;/h1&gt;</div>&nbsp;
+              <div style={{ color: "yellow" }}>&lt;/div&gt;</div>&nbsp;
             </div>
           </div>
           {/*  */}

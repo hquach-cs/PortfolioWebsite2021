@@ -1,6 +1,9 @@
 import React from "react";
 import CodePython from "./CodePython";
 import CodeJava from "./CodeJava";
+import CodeCPlus from "./CodeCPlus";
+import CodeHTML from "./CodeHTML";
+import CodeReact from "./CodeReact";
 import "./../styles/about.css";
 
 // Styles
@@ -28,37 +31,96 @@ export default class About extends React.Component {
                 <div class="aboutEducName" style={{ animationDelay: "1.2s" }}>
                   <h2>Education</h2>
                   <p>
-                    Put all speaking her delicate recurred possible. Set
-                    indulgence inquietude discretion insensible bed why
-                    announcing. Middleton fat two satisfied additions.
+                    I got my associate and bachelor's degree in{" "}
+                    <div
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        display: "inline",
+                        color: "yellow",
+                      }}
+                    >
+                      Computer Science
+                    </div>
+                    . I graduated from{" "}
+                    <div
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        display: "inline",
+                        color: "orange",
+                      }}
+                    >
+                      The University of Tennessee, Knoxville{" "}
+                    </div>
+                    in December of 2019. Go Vols!
                   </p>
                 </div>
               </div>
               <div class="aboutDesc">
                 <div style={{ animationDelay: "0s" }}>
-                  <h2>Placeholder!</h2>
+                  <h2>More about me</h2>
                   <p>
-                    Put all speaking her delicate recurred possible. Set
-                    indulgence inquietude discretion insensible bed why
-                    announcing. Middleton fat two satisfied additions.
+                    Hello my name is{" "}
+                    <div
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        display: "inline",
+                        color: "cyan",
+                      }}
+                    >
+                      {" "}
+                      Henry Quach{" "}
+                    </div>{" "}
+                    and I am an aspiring software developer that loves to
+                    program multiple interesting apps to showcase to users. My
+                    goal is to become a reliable programmer that create multiple
+                    things that users/consumers enjoy.
                   </p>
                 </div>
                 <div style={{ animationDelay: "0.3s" }}>
-                  <h2>Placeholder</h2>
+                  <h2>Design</h2>
                   <p>
-                    Yourself off its pleasant ecstatic now law. Ye their mirth
-                    seems of songs. Prospect out bed contempt separate. Her
-                    inquietude our shy yet sentiments collecting. Cottage fat
-                    beloved himself arrived old.
+                    Users comes first when designing any application. Without a
+                    good design, application will fall through and be forgotten.
+                    That's why I dedicate a lot of time to designing my projects
+                    for the user's experience.
                   </p>
                 </div>
                 <div style={{ animationDelay: ".6s" }}>
-                  <h2>Placeholder</h2>
+                  <h2>Soft-Skills</h2>
                   <p>
-                    Husbands ask repeated resolved but laughter debating. She
-                    end cordial visitor noisier fat subject general picture. Or
-                    if offering confined entrance no. Nay rapturous him see
-                    something residence.
+                    I believe my soft skills such as{" "}
+                    <div
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        display: "inline",
+                        color: "yellow",
+                      }}
+                    >
+                      Organization{" "}
+                    </div>{" "}
+                    ,{" "}
+                    <div
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        display: "inline",
+                        color: "orange",
+                      }}
+                    >
+                      Responsibility{" "}
+                    </div>{" "}
+                    , and{" "}
+                    <div
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        display: "inline",
+                        color: "cyan",
+                      }}
+                    >
+                      Leadership{" "}
+                    </div>{" "}
+                    are most important when working in a professional
+                    environment. These soft skills me to fit into any group
+                    without
                   </p>
                 </div>
               </div>
@@ -67,7 +129,9 @@ export default class About extends React.Component {
               <h2 style={{ paddingRight: "20px" }}>Languages:</h2>
               <div
                 class={
-                  this.state.codeLang == "python" ? "activeSkill" : "skillsItem"
+                  this.state.codeLang === "python"
+                    ? "activeSkill"
+                    : "skillsItem"
                 }
                 onClick={this.handleCodeClick("python")}
                 style={{ animationDelay: "0s" }}
@@ -76,26 +140,49 @@ export default class About extends React.Component {
               </div>
               <div
                 class={
-                  this.state.codeLang == "java" ? "activeSkill" : "skillsItem"
+                  this.state.codeLang === "java" ? "activeSkill" : "skillsItem"
                 }
                 onClick={this.handleCodeClick("java")}
                 style={{ animationDelay: "0.25s" }}
               >
                 Java
               </div>
-              <div class="skillsItem" style={{ animationDelay: "0.5s" }}>
+              <div
+                class={
+                  this.state.codeLang === "cplus" ? "activeSkill" : "skillsItem"
+                }
+                onClick={this.handleCodeClick("cplus")}
+                style={{ animationDelay: "0.5s" }}
+              >
                 C/C++
               </div>
-              <div class="skillsItem" style={{ animationDelay: "0.75s" }}>
+              <div
+                class={
+                  this.state.codeLang === "html" ? "activeSkill" : "skillsItem"
+                }
+                onClick={this.handleCodeClick("html")}
+                style={{ animationDelay: "0.75s" }}
+              >
                 HTML5/CSS
               </div>
-              <div class="skillsItem" style={{ animationDelay: "1s" }}>
+              <div
+                class={
+                  this.state.codeLang === "react" ? "activeSkill" : "skillsItem"
+                }
+                onClick={this.handleCodeClick("react")}
+                style={{ animationDelay: "1s" }}
+              >
                 React.js
               </div>
             </div>
           </div>
-          <CodePython active={this.state.codeLang == "python" ? true : false} />
-          <CodeJava active={this.state.codeLang == "java" ? true : false} />
+          <CodePython
+            active={this.state.codeLang === "python" ? true : false}
+          />
+          <CodeJava active={this.state.codeLang === "java" ? true : false} />
+          <CodeCPlus active={this.state.codeLang === "cplus" ? true : false} />
+          <CodeHTML active={this.state.codeLang === "html" ? true : false} />
+          <CodeReact active={this.state.codeLang === "react" ? true : false} />
         </div>
       </div>
     );

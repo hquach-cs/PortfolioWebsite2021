@@ -18,6 +18,53 @@ export default class Navbar extends React.Component {
       contactActive: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos < window.innerHeight - window.innerHeight * (1 / 3)) {
+      this.setState({
+        startActive: true,
+        aboutActive: false,
+        projectActive: false,
+        contactActive: false,
+      });
+      this.props.DetectSection("start");
+    }
+    if (
+      currentScrollPos >= window.innerHeight - window.innerHeight * (1 / 3) &&
+      currentScrollPos < window.innerHeight * 2 - window.innerHeight * (1 / 3)
+    ) {
+      this.setState({
+        startActive: false,
+        aboutActive: true,
+        projectActive: false,
+        contactActive: false,
+      });
+      this.props.DetectSection("about");
+    }
+    if (
+      currentScrollPos >=
+        window.innerHeight * 2 - window.innerHeight * (1 / 3) &&
+      currentScrollPos < window.innerHeight * 3 - window.innerHeight * (1 / 3)
+    ) {
+      this.setState({
+        startActive: false,
+        aboutActive: false,
+        projectActive: true,
+        contactActive: false,
+      });
+      this.props.DetectSection("project");
+    }
+    if (
+      currentScrollPos >=
+      window.innerHeight * 3 - window.innerHeight * (1 / 3)
+    ) {
+      this.setState({
+        startActive: false,
+        aboutActive: false,
+        projectActive: false,
+        contactActive: true,
+      });
+      this.props.DetectSection("contact");
+    }
   }
 
   componentDidMount() {
@@ -92,7 +139,7 @@ export default class Navbar extends React.Component {
       <header class={this.state.show ? "navbarHeader" : "navbarHeader animate"}>
         <div class="navbarlogo_button">
           <div style={{ display: "flex" }}>
-            <a href="#" class="navbarLogo typewriter">
+            <a href="#start" class="navbarLogo typewriter">
               Henry Quach
             </a>
           </div>
