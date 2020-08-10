@@ -5,3 +5,83 @@
   text-align: center;
   padding-top: 5%;
 }
+
+.projectTitle {
+  margin-bottom: 30px;
+}
+
+.projectImg {
+  width: 100%;
+  height: 300px;
+  background: white;
+}
+
+.projectListUL {
+  columns: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.projectName {
+  margin-top: 20px;
+}
+
+.projectItem {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0px 40px;
+}
+
+.projectName ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectDesc {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.projectItemTitle {
+  font-family: "Montserrat", sans-serif;
+}
+
+.projectItemSkill {
+  cursor: pointer;
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.projectItemSkill:hover {
+  color: cyan;
+  border-color: cyan;
+}
+
+@media screen and (max-width: 600px) {
+  .projectListUL {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .projectItem {
+    width: 90%;
+    padding-bottom: 20px;
+  }
+
+  .projectName UL {
+    flex-direction: column;
+  }
+
+  .projectName ul li {
+    width: 90%;
+  }
+  .projectDesc {
+    text-align: center;
+  }
+}
