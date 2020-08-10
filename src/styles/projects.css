@@ -1,3 +1,7 @@
+.projects {
+  min-height: 100vh;
+}
+
 .projectContainer {
   min-height: 100vh;
   width: 100%;
@@ -8,12 +12,18 @@
 
 .projectTitle {
   margin-bottom: 30px;
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: FadeIn 1s forwards;
 }
 
 .projectImg {
   width: 100%;
   height: 300px;
-  background: white;
+  border: white solid 1px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: FadeIn 1s forwards;
 }
 
 .projectListUL {
@@ -44,10 +54,17 @@
 .projectDesc {
   text-align: left;
   margin-top: 10px;
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s 1.8s forwards;
+  line-height: 1.5rem;
 }
 
 .projectItemTitle {
   font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
 }
 
 .projectItemSkill {
@@ -56,6 +73,9 @@
   border-radius: 20px;
   padding: 5px 10px;
   white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-75%);
+  animation: slideInFromLeft 1.5s forwards;
 }
 
 .projectItemSkill:hover {
