@@ -78,7 +78,7 @@ export default class About extends React.Component {
                 <div style={{ animationDelay: "0s" }}>
                   <h2>Education</h2>
                   <p>
-                    I got my associate and bachelor's degree in{" "}
+                    I recieve my associate and bachelor's degree in{" "}
                     <div
                       style={{
                         fontFamily: "Montserrat, sans-serif",
@@ -105,7 +105,7 @@ export default class About extends React.Component {
                   <h2>Design</h2>
                   <p>
                     Users comes first when designing any application. Without a
-                    good design, application will fall through and be forgotten.
+                    good design, application will break apart and be forgotten.
                     That's why I dedicate a lot of time to designing my projects
                     for the user's experience.
                   </p>

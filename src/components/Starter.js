@@ -18,7 +18,8 @@ export default class Starter extends React.Component {
           </div>
           <p>
             Software engineer residing in Nashville, TN.
-            <span>Looking for a job opportunity.</span>
+            <span>Looking for a job opportunity to express</span>
+            <span> my creative ideas.</span>
           </p>
         </div>
       </div>
