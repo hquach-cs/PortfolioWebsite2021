@@ -144,8 +144,7 @@ export default class About extends React.Component {
                       Leadership{" "}
                     </div>{" "}
                     are most important when working in a professional
-                    environment. These soft skills me to fit into any group
-                    without
+                    environment. These skills allow me to connect with my peers.
                   </p>
                 </div>
               </div>
