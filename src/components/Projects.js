@@ -1,6 +1,6 @@
 import React from "react";
 import "./../styles/projects.css";
-
+import calendarimg from "./BetterCalendarPic.png";
 // Styles
 export default class Projects extends React.Component {
   render() {
@@ -72,7 +72,9 @@ export default class Projects extends React.Component {
               <a
                 href="https://github.com/hquach-cs/JournalingApp"
                 class="projectImg"
-              ></a>
+              >
+                <img src={calendarimg} class="calendarImg" />
+              </a>
               <div class="projectName">
                 <ul>
                   <li
