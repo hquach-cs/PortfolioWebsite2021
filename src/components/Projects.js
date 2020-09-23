@@ -1,6 +1,7 @@
 import React from "react";
 import "./../styles/projects.css";
 import calendarimg from "./BetterCalendarPic.png";
+import websitegif from "./websitegif.gif";
 // Styles
 export default class Projects extends React.Component {
   render() {
@@ -15,7 +16,9 @@ export default class Projects extends React.Component {
               <a
                 class="projectImg"
                 href="https://github.com/hquach-cs/PortfolioWebsite"
-              ></a>
+              >
+                <img src={websitegif} class="calendarImg" />
+              </a>
               <div class="projectName">
                 <ul>
                   <li
