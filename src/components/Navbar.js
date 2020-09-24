@@ -2,7 +2,7 @@ import React from "react";
 import HamburgerMenu from "./HamburgerMenu.js";
 import Navlink from "./Navlink";
 import "./../styles/navbar.css";
-import Resume from "./../scripts/hquachResume.pdf";
+import Resume from "./../scripts/hquachResume2.pdf";
 
 // Styles
 export default class Navbar extends React.Component {
